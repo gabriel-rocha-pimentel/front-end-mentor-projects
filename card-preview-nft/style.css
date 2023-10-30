@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+}
+
+#card_nft {
+    width: 360px;
+    margin: 180px auto;
+    height: auto;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+}
+
+.container {
+    position: relative;
+    
+    border-radius: 10px;
+}
+
+.container {
+    cursor: pointer;
+}
+
+.imagem-1 {
+    display: block;
+    width: 100%;
+    padding: 40%;
+    position: inherit;
+    z-index: 1;
+    height: auto;
+    opacity: 0;
+}
+
+.imagem-1:hover {
+    opacity: 0.7;
+    border-radius: 10px;
+    background-color: hsl(180, 100%, 40%);
+}
+
+.imagem-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
+}
+
+#box_content h1 {
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+#box_content h1:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+#box_content p {
+    font-size: 1.125em;
+    color:  hsl(215, 51%, 70%);
+    margin: 15px 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+.nft_type .ether_tag {
+    color: hsl(178, 100%, 50%)!important;
+    font-weight: 600600!important;
+}
+
+.nft_type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#box_content .nft_type p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.nft_type img {
+    width: 10%;
+    margin: 0 5px;
+
+}
+
+.img_perfil {
+    border: groove 1px #fff;
+    border-radius: 50%;
+    margin: 8px 15px 8px 0px;
+    width: 50px;
+    margin: 10px 5px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color:  hsl(215, 51%, 70%);
+    margin: 15px 0 0px 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer span {
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer span:hover {
+    color: hsl(178, 100%, 50%);
+}

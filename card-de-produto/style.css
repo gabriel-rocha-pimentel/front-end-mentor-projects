@@ -1,0 +1,112 @@
+/*  STILO PADRÃO  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+#card-of-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 360px;
+    width: 1440px;
+    align-items: center;
+}
+
+.img-product {
+    height: 480px;
+}
+
+.img-product img {
+    object-fit: cover;
+    width: 320px;
+    border-radius: 10px 0 0 10px;
+}
+
+#description-card {
+    background-color: hsl(0, 0%, 100%);
+    width: 480px;
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    height: 480px;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.category {
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.description {
+    white-space:pre-line;
+}
+
+.description h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.description p {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.values {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: hsl(158, 36%, 37%);
+}
+
+.values h2 {
+    font-size: 35px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+.values p {
+    margin: 0px 10px;
+    color: hsl(228, 12%, 48%);
+    text-decoration-line: line-through;
+}
+
+.button {
+    color: #ffffff;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    display: flex;
+    border: none;
+    padding: 15px 60px;
+    background-color: hsl(158, 36%, 37%);
+    align-items: center;
+    font-size: 20px;
+}
+
+.button img {
+    margin: 0 10px;
+}
+
+.button:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+
+.addCart {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height:100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+
+#card_container {
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+    padding: 25px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px 10px 100px 10px;
+}
+
+#data_content fieldset {
+    text-decoration: none;
+    border: none;
+    margin: 0 20px;
+    width: 20%;
+}
+
+#data_content input {
+    width: 100%;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.8em;
+    border: solid 1px hsl(0, 0%, 86%);   
+}
+
+#data_content input:focus-visible {
+    outline-style: inset;
+    outline-color: hsl(259, 100%, 65%);
+}
+
+.contain_icon-arrow {
+    display: flex;
+    align-items: center;
+}
+
+.icon-arrow {
+    background-color: hsl(259, 100%, 65%);
+    padding: 15px;
+    transition: ease-in-out 1s;
+    border-radius: 50%;
+}
+
+.icon-arrow:hover {
+    background-color: hsl(0, 0%, 8%);
+    transition: ease-in-out 1s;
+}
+
+.contain_icon-arrow .btn {
+    transition: ease-in-out 1s;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#data_content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+h2 {
+    display: flex;
+    margin: 15px 0;
+}
+
+#data_content legend {
+    margin: 10px 0px;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+}
+
+.divisor_card {
+    border: solid 1px;
+    height: 0;
+    border: solid 1px hsl(0, 0%, 86%);
+    width: 100%;
+}
+
+#contain_results {
+    font-size: 36px;
+    font-weight: 800;
+    display: flex;
+    color: hsl(0, 0%, 8%);
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.invalid {
+    outline: 1px inset hsl(0, 100%, 67%);
+}
+
+.cursor_write {
+    height: 75px;
+    margin: 0 10px;
+    width: auto;
+    border: solid 1px #000;
+}
+
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    #card_container { width: 100%; }
+    .contain_icon-arrow { justify-content: center; }
+
+    .contain_icon-arrow .btn {
+        position: absolute;
+    }
+    .contain_icon-arrow {
+        margin: 60px 0%;
+    }
+    #data_content {
+        transition: ease-in-out 1s;
+        justify-content: center;
+    }
+    #data_content input {
+        width: 100px;
+        text-align: center;
+        padding: 1em 0;
+        font-size: 1.5em;
+    }
+    #contain_results {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 375px) {
+    #data_content input {
+        width: 75px;
+    }
+}

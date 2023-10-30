@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+    width: 100%;
+    background-size: contain;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#conteiner_card {
+    width: 390px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px auto;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.img_header {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.box_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0px 0px 20px 0px;;
+}
+
+.content_text h1 {
+    margin: 50px 0px 15px 0px;
+    font-size: 1.5em;
+}
+
+.content_text {
+    text-align: center;
+}
+
+.content_text p {
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+}
+
+.content_pay {
+    width: 100%;
+    margin: 20px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.content_pay a {
+    font-weight: 700;
+}
+
+
+.content_pay a:hover {
+    color: hsl(245, 75%, 70%);
+    text-decoration: none;
+}
+
+.pay {
+    display: flex;
+    align-items: center;
+}
+
+.pay_text {
+    margin: 0 15px;
+}
+
+.pay_text p {
+    color: hsl(224, 23%, 55%);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 80px;
+}
+
+.btn_pay {
+    color: #fff;
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn_pay:hover {
+    background-color: hsl(245, 75%, 70%);
+}
+
+.btn_cancel {
+    color: hsl(223, 15%, 60%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.btn_cancel:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 1440px) {
+    body{
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+}

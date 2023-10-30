@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <main id="container_main">
+      <header id="card_component">
+        <aside id="aside_imgs">
+          <img src="./images/bg-pattern-desktop.svg" alt="bg-pattern-desktop" class="img_style img_bg">
+          <img src="./images/illustration-woman-online-desktop.svg" alt="woman_online_desktop" class="img_style img_woman">
+        </aside>
+        <article id="content_faq">
+          <h1 class="faq_title">FAQ</h1>
+
+          <section class="box_faq">
+            <ul>
+              <li>How many team members can I invite? <button onclick="toggleResposta(1)" type="button"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="img_style img_arrow" ></button> </li>
+              <span id="resposta_1"></span>
+            </ul>
+            <ul>
+              <li>What is the maximum file upload size?<button onclick="toggleResposta(2)" type="button"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="img_style img_arrow" ></button> </li>
+              <span id="resposta_2"></span>
+            </ul>
+            <ul>
+              <li>How do I reset my password?<button onclick="toggleResposta(3)" type="button"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="img_style img_arrow" ></button> </li>
+              <span id="resposta_3"></span>
+            </ul>
+            <ul>
+              <li>Can I cancel my subscription?<button onclick="toggleResposta(4)" type="button"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="img_style img_arrow" ></button> </li>
+              <span id="resposta_4"></span>
+            </ul>
+            <ul>
+              <li>Do you provide additional support?<button onclick="toggleResposta(5)" type="button"><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="img_style img_arrow" ></button> </li>
+              <span id="resposta_5"></span>
+            </ul>
+          </section>
+        </article>
+      </header>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

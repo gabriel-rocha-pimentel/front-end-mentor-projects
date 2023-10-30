@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='static/assets/images/favicon-32x32.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <main id="card_container">
+    <section id="contain_form">
+      <form id="data_content" action="/" method="POST">
+        <fieldset>
+          <legend for="input_day">DAY</legend>
+          <input min="1" max="31" type="number" name="input_day" id="input_day" required
+                 class="{{ day_class }}">
+      </fieldset>
+
+      <fieldset>
+          <legend for="input_month">MONTH</legend>
+          <input max="12" type="number" name="input_month" id="input_month" class="{{ month_class }}">
+      </fieldset>
+
+      <fieldset>
+          <legend for="input_year">YEAR</legend>
+          <input max="2050" type="number" name="input_year" id="input_year" class="{{ year_class }}">
+      </fieldset>
+      </form>
+      <aside class="contain_icon-arrow">
+        <hr class="divisor_card">
+        <button id="submit_btn" class="btn" type="submit"><img class="icon-arrow" src="{{ url_for('static', filename='assets/images/icon-arrow.svg') }}" alt="icon arrow object"></button>
+      </aside>
+    </section>
+    <section id="contain_results">
+      <h2><span style="color: hsl(259, 100%, 65%);">{{ output_year }}</span> Years</h2>
+      <h2><span style="color: hsl(259, 100%, 65%);">{{ output_day }}</span> Month</h2>
+      <h2><span style="color: hsl(259, 100%, 65%);">{{ output_month }}</span> Days</h2>
+    </section>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/kingthecode">Gabriel Rocha</a>.
+  </footer>
+
+  <script src="/static/js/submits_process.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTES */
+
+@font-face {
+    font-family: Outfit_Bold;
+    src: url(./Outfit/static/Outfit-Medium.ttf);
+}
+
+@font-face {
+    font-family: Outfit_Light;
+    src: url(./Outfit/static/Outfit-Light.ttf);
+}
+
+/* _______________ */
+
+html {
+    background-color: hsl(212, 45%, 89%);
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    top: 50%;
+}
+
+#qr_card {
+    width: 480px;
+    background-color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box {
+    margin: 10px;
+    padding: 20px;
+}
+
+.box, img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+h1 {
+    color: hsl(218, 44%, 22%);
+    font-family: Outfit_Bold, sans-serif, Arial;
+}
+
+p {
+    padding: 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: hsl(220, 15%, 55%);
+    font-family: Outfit_Light, sans-serif, Arial;
+}
