@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    padding: 0 5em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 4em 0;
+    justify-content: space-between;
+}
+
+.img_logo {
+    width: 25%;
+}
+
+.menu_mobile {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    width: 20em;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 35vh;
+    border-radius: 10px;
+    top: 15%;
+    position: absolute;
+    background-color: hsl(257, 27%, 26%);
+    animation: menuAnimation 2s linear;
+    overflow: hidden;
+    align-items: center;
+}
+
+.btn_menuMobile {
+    width: 8%;
+    border: none;
+    background: none;
+}
+
+.menu_mobile a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+}
+
+@keyframes menuAnimation {
+    from {
+        height: 0vh;
+    }
+    to {
+        height: 35vh;
+    }
+}
+
+.btnMobile {
+    font-size: 1.2em;
+    display: flex;
+    width: 250px;
+    font-weight: 900;
+    padding: 10px;
+    border: none;
+    margin: 5px 0px;
+    height: 5vh;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnMobile-signup {
+    background: hsl(180, 66%, 49%);
+    border-radius: 28px;
+}
+
+.btnMobile-login {
+    background: none;
+}
+
+.menu-logo img {
+    margin-right: 20px;
+}
+
+.img_menu {
+    display: none;
+    width: 100%;
+}
+
+.menu-links {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-link {
+    margin: 0px 3em;
+    text-decoration: none;
+    color: hsl(257, 7%, 63%);
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: hsl(257, 7%, 63%);
+    font-size: 1em;
+}
+
+.btnCopy:hover, .btn-shorten:hover, .btn:hover {
+    background-color: hsl(180, 66%, 75%);
+}
+
+.btn-signup {
+    background: hsl(180, 66%, 49%);
+    padding: 10px;
+    width: 50%;
+    border-radius: 28px;
+    font-size: 1em;
+    color: #fff;
+    margin: 5px 0px;
+}
+
+.menu_mobile hr {
+    width: 90%;
+    height: 1px;
+    border-radius: 10px;
+    border-color: hsl(0, 0%, 75%, 0.2);
+}
+
+/* Title Styles */
+.container-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+}
+
+.title-content {
+    width: 50%;
+}
+
+.title {
+    margin: 5px 0px;
+    font-size: 2.5em;
+}
+
+.statics-title {
+    margin: 8em 0;
+}
+
+.description-title {
+    color: hsl(257, 7%, 63%);
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.title-image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title-image img {
+    width: 75%;
+}
+
+/* Main Styles */
+main {
+    position: relative;
+    z-index: 0;
+    transform: translateY(65px);
+    border-radius: 10px;
+    width: 85%;
+    height: 20vh;
+    background-color: hsl(257, 27%, 26%);
+    overflow: hidden;
+}
+
+.img_link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative; /* Add this line */
+}
+
+.container-main {
+    position: absolute; /* Position the container absolutely */
+    top: 0; /* Place it at the top */
+    left: 0; /* Place it at the left */
+    width: 100%; /* Take full width */
+    height: 100%; /* Take full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-shortLink {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 95%; /* Take full width */
+    max-width: 100%; /* Limit the width if needed */
+    background: none; /* Add a semi-transparent background */
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
+
+.short-link {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    width: 73%;
+    height: auto;
+}
+
+.btn-shorten {
+    background: hsl(180, 66%, 49%);
+    border: none;
+    padding: 1em;
+    width: 25%;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Content Statistics Styles */
+div.newLinks {
+    display: flex;
+    margin-top: 5em;
+    padding: 1em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
+    width: 85%;
+    justify-content: space-between;
+}
+
+div.newLinks .linkOriginal{
+    width: 50%;
+    overflow: hidden;
+}
+
+.btnCopyBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+}
+
+.btnCopyBox p {
+    color: hsl(180, 66%, 49%);
+    margin-right: 1em;
+}
+
+.btnCopyBox button {
+    background: hsl(180, 66%, 49%);
+    border: none;
+    padding: 1em;
+    font-weight: 800;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnCopy.clicked {
+    background-color: hsl(257, 27%, 26%);
+}
+
+.content-statics {
+    text-align: center;
+    padding-bottom: 10em;
+    background-color: hsl(0, 0%, 75%, 0.2);
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title-statics {
+    font-size: 2em;
+}
+
+.description-statics {
+    color: hsl(257, 7%, 63%);
+    font-size: 1.3em;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.box-statics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-statics hr {
+    width: 50%;
+    border: none;
+    height: 10px;
+    z-index: 0;
+    position: absolute;
+    background: cyan;
+}
+
+.card-statics {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 0 10px;
+    max-width: 350px;
+    display: flex;
+    height: 350px;
+    width: 100%;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.card-2 {
+    transform: translateY(50px);
+}
+.card-1 {
+    transform: translateY(100px);
+}
+
+.card-statics img {
+    margin-top: -60px;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: hsl(257, 27%, 26%);
+}
+
+.title-card {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.description-card {
+    color: hsl(257, 7%, 63%);
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Attribution Styles */
+.attribution {
+    text-align: center;
+    margin-top: 30px;
+    color: hsl(257, 7%, 63%);
+}
+
+.attribution a {
+    color: inherit;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+footer {
+    height: 100%;
+    width: 100%;
+    background-color: hsl(260, 8%, 14%);
+}
+
+.btn-footer {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 25vh;
+    background-color: hsl(257, 27%, 26%);
+    display: flex;
+    justify-content: center;
+}
+
+section.box-btn {
+    position: absolute;
+    font-size: 1em;
+    color: #fff;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    z-index: 0;
+    justify-content: center;
+}
+
+.box-btn h2 {
+    margin: 25px
+}
+
+section.menu-footer-link {
+    display: flex;
+    padding: 50px 25px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-menu {
+    display: flex;
+    width: 75%;
+    height: 15vh;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.menu-link {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.menu-link h3 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#img-footer {
+    filter: grayscale(100) brightness(200);
+}
+
+.menu-link a {
+    margin-bottom: 10px;
+    font-size: 1em;
+    text-decoration: none;
+    color: hsl(0, 0%, 75%);
+}
+
+.menu-link-icon {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 1024px) {
+    div.newLinks {
+        flex-direction: column;
+    }
+
+    div.newLinks hr {
+        color: gray;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .btnCopyBox {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .btnCopyBox p {
+        font-weight: 800;
+        font-size: 1em;
+        margin: 2px 0;
+    }
+
+    header {padding: 0 1em;}
+
+    .menu {
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+
+    .title-content {
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    .container-title, .box-statics {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+    }
+
+    .box-shortLink {
+        flex-direction: column;
+    }
+
+    .btn-shorten {
+        width: 73%;
+    }
+
+    .box-statics hr {
+        transform: rotate(90deg);
+        width: 700px;
+    }
+
+    .content-statics {
+        height: auto;
+    }
+
+    .card-statics {
+        margin: 2em 0;
+        align-items: center;
+        transform: none;
+    }
+
+    .title-image img {
+        width: 100%;
+    }
+
+    .menu-buttons {
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    section.menu-footer-link, .footer-menu {
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .menu-link {
+        margin: 1em 0;
+        align-items: center;
+        height: 100%;
+    }
+
+    .menu-links { justify-content: space-evenly;}
+
+    .menu-link-icon {
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 1em 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-links, .menu-buttons {
+        display: none;
+    }
+    .img_menu {
+        display: block;
+        cursor: pointer;
+    }
+}

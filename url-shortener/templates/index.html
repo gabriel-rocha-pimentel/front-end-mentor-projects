@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <title>Shortly URL</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <img class="img_logo" src="{{ url_for('static', filename='images/logo.svg') }}" alt="LOGO IMAGE">
+            {% if tamanho_da_tela <= 425 %}
+                <button class='btn_menuMobile' onclick="toggleMobileMenu()">
+                    <img class="img_menu" src="{{ url_for('static', filename='images/menu.png') }}" alt="MENU IMAGE">
+                </button>
+                <div class="menu-links">
+                    <a class="menu-link" href="#">Features</a>
+                    <a class="menu-link" href="#">Pricing</a>
+                    <a class="menu-link" href="#">Resources</a>
+                </div>
+                <div class="menu-buttons">
+                    <button class="btn btn-login">Login</button>
+                    <button class="btn btn-signup">Sign Up</button>
+                </div>
+            {% endif %}
+        </nav>
+        <section class="container-title">
+            <div class="title-content">
+                <h1 class="title">More than just<br>shorter links</h1>
+                <p class="description-title">Build your brand's recognition and get detailed
+                    insights on how your links are performing.
+                </p>
+                <button class="btn btn-signup">Get Started</button>
+            </div>
+            <div class="title-image">
+                <img src="{{ url_for('static', filename='images/illustration-working.svg') }}" alt="OFFICE WORK IMAGE">
+            </div>
+        </section>
+    </header>
+
+    <main id="createLink">
+        <img class="img img_link" src="{{ url_for('static', filename='images/bg-shorten-desktop.svg') }}" srcset="{{ url_for('static', filename='images/bg-boost-mobile.svg') }}, 2x">
+        <section class="container-main">
+            <form id="myForm" method="POST" action="/" class="box-shortLink" novalidate>
+                <input class="short-link"
+                    type="url"
+                    name="short_link"
+                    id="short_link"
+                    placeholder="Shorten a link here...">
+                <button type="submit" class="btn btn-shorten">Shorten It!</button>
+            </form>
+            <p id="error-message" class="error-message"></p>
+        </section>
+    </main>    
+
+    <section class="content-statics">
+        {% for link in links %}
+        <div class="newLinks">
+            <p class="linkOriginal">{{ link.original_url }}</p>
+            <hr>
+            <div class="btnCopyBox">
+                <p>{{ link.shortened_url }}</p>
+                <button id="copyButton" class="btnCopy" data-id="{{ link.id }}">Copy</button>
+            </div>
+        </div>
+        {% endfor %}    
+        <div class="statics-title">
+            <h2 class="title-statics">Advanced Statistics</h2>
+            <p class="description-statics">
+                Track how your links are performing across the web with
+                our advanced statistics dashboard.
+            </p>
+        </div>
+        <section class="box-statics">
+            <hr>
+            <div class="card-statics card-3">
+                <img src="{{ url_for('static', filename='images/icon-brand-recognition.svg') }}" alt="ANALYTICS IMAGE">
+                <h3 class="title-card">Brand Recognition</h3>
+                <p class="description-card">
+                    Boost your recognition with
+                    each click. Generic links don't mean a thing, Branded links help instill
+                    confidence in your content.
+                </p>
+            </div>
+            <div class="card-statics card-2">
+                <img src="{{ url_for('static', filename='images/icon-detailed-records.svg') }}" alt="ANALYTICS IMAGE">
+                <h3 class="title-card">Detailed Records</h3>
+                <p class="description-card">
+                    Gain insights into who is clicking your
+                    links. Knowing when and where people engage with your content
+                    helps inform better decisions.
+                </p>
+            </div>
+            <div class="card-statics card-1">
+                <img src="{{ url_for('static', filename='images/icon-fully-customizable.svg') }}" alt="ANALYTICS IMAGE">
+                <h3 class="title-card">Fully Customizable</h3>
+                <p class="description-card">
+                    Improve brand awareness and
+                    content discoverability through 
+                    customizable links supercharging 
+                    audience engagement.
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <section class="btn-footer">
+            <img class="img img_link" src="{{ url_for('static', filename='images/bg-boost-desktop.svg') }}">
+            <section class="box-btn">
+                <h2>Boost your links today</h2>
+                <button class="btn btn-signup">Get Started</button>
+            </section>
+        </section>
+        <section class="menu-footer-link">
+            <div class="footer-logo">
+                <img id="img-footer" src="{{ url_for('static', filename='images/logo.svg') }}" alt="LOGO IMAGE">
+            </div>
+            <div class="footer-menu">
+                <div class="menu-link">
+                    <h3>Features</h3>
+                    <a href="" class="link_menu-footer">Link Shorterning</a>
+                    <a href="" class="link_menu-footer">Branded Links</a>
+                    <a href="" class="link_menu-footer">Analytics</a>
+                </div>
+                <div class="menu-link">
+                    <h3>Resources</h3>
+                    <a href="" class="link_menu-footer">Blog</a>
+                    <a href="" class="link_menu-footer">Developers</a>
+                    <a href="" class="link_menu-footer">Support</a>
+                </div>
+                <div class="menu-link">
+                    <h3>Company</h3>
+                    <a href="http://" class="link_menu-footer">About</a>
+                    <a href="http://" class="link_menu-footer">Our Team</a>
+                    <a href="http://" class="link_menu-footer">Carees</a>
+                    <a href="http://" class="link_menu-footer">Contact</a>
+                </div>
+                <div class="menu-link-icon">
+                    <a href="http://" class="menu-icon">
+                        <img src="{{ url_for('static', filename='images/icon-facebook.svg') }}" alt="" srcset="" class="link-icon">
+                    </a>
+                    <a href="http://" class="menu-icon">
+                        <img src="{{url_for('static', filename='images/icon-twitter.svg') }}" alt="" srcset="" class="link-icon">
+                    </a>
+                    <a href="http://" class="menu-icon">
+                        <img src="{{ url_for('static', filename='images/icon-pinterest.svg') }}" alt="" srcset="" class="link-icon">
+                    </a>
+                    <a href="http://" class="menu-icon">
+                        <img src="{{ url_for('static', filename='images/icon-instagram.svg') }}" alt="" srcset="" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/openMenu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/short_link.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/width_window.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/copyLink.js') }}"></script>
+</body>
+</html>
