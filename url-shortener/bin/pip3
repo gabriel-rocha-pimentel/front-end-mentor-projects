@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/kingofpirate/Área de Trabalho/Programação/front-end/front-end-projetos/url-shortener/url-shortener/bin/python" "$0" "$@"
+'''exec' "/home/kingofpirate/Área de Trabalho/Programação/front-end/projetos/url-shortener/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
