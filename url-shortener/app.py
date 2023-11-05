@@ -1,4 +1,3 @@
-from app import app
 from flask import Flask, jsonify, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import shortuuid
